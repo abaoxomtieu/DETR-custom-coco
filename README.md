@@ -76,3 +76,8 @@ python main.py --dataset_file vehicle --data_path ../data/ --batch_size 8 --epoc
 
 GPU: RTX2060 max-Q
 ### Inference time: 17ms ###
+
+| Model|Inference time|
+|------|--------------|
+|YOLOv8l|25ms|
+|DETR|16ms|
