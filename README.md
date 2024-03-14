@@ -85,7 +85,7 @@ GPU: RTX2060 max-Q
 | Model|Params|Inference time|
 |------|------|--------------|
 |YOLOv8l|43m|25ms|
-|DETR|42m|16ms|
+|DETR|42m|17ms|
 
 # Deformable DETR
 
