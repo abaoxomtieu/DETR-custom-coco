@@ -58,7 +58,9 @@ python main.py --dataset_file vehicle --data_path ../data/ --batch_size 8 --epoc
 ```
 
 
-## Evaluate on the test set 
+## Evaluate on the test set
+
+ ## DETR
 | Metric            | IoU         | Area    | Max Dets | Value |
 |-------------------|-------------|---------|----------|-------|
 | Average Precision | 0.50:0.95   | all     | 100      | 0.506 |
@@ -73,6 +75,13 @@ python main.py --dataset_file vehicle --data_path ../data/ --batch_size 8 --epoc
 | Average Recall    | 0.50:0.95   | small   | 100      | 0.252 |
 | Average Recall    | 0.50:0.95   | medium  | 100      | 0.626 |
 | Average Recall    | 0.50:0.95   | large   | 100      | 0.779 |
+
+## YOLOv8l
+| Metric            | IoU         | Area    | Max Dets | Value |
+|-------------------|-------------|---------|----------|-------|
+| Average Precision | 0.50        | all     | 100      | 0.936 |
+| Average Precision | 0.50:0.95   | all     | 100      | 0.762 |
+|
 
 ### General evaluation: 
 The model does not have good performance in detecting small objects. Probably because Feature Pyramid Network is not used. Difficult to converge. When training for 5 epochs, no objects can be detected even though there are only 6 classes.
