@@ -1,4 +1,6 @@
+# Model architecture
 
+![Image Name](./img/DETR.png)
 
 ## Code Installation
 
@@ -56,7 +58,7 @@ python main.py --dataset_file vehicle --data_path ../data/ --batch_size 8 --epoc
 ```
 
 
-## Results on the test set 
+## Evaluate on the test set 
 | Metric            | IoU         | Area    | Max Dets | Value |
 |-------------------|-------------|---------|----------|-------|
 | Average Precision | 0.50:0.95   | all     | 100      | 0.506 |
@@ -72,12 +74,22 @@ python main.py --dataset_file vehicle --data_path ../data/ --batch_size 8 --epoc
 | Average Recall    | 0.50:0.95   | medium  | 100      | 0.626 |
 | Average Recall    | 0.50:0.95   | large   | 100      | 0.779 |
 
+### General evaluation: 
+The model does not have good performance in detecting small objects. Probably because Feature Pyramid Network is not used. Difficult to converge. When training for 5 epochs, no objects can be detected even though there are only 6 classes.
+
 ## Inference Onnx with TensorrtExecutionProvider:
 
 GPU: RTX2060 max-Q
 ### Inference time: 17ms ###
 
-| Model|Inference time|
-|------|--------------|
-|YOLOv8l|25ms|
-|DETR|16ms|
+| Model|Params|Inference time|
+|------|------|--------------|
+|YOLOv8l|43m|25ms|
+|DETR|42m|16ms|
+
+# Deformable DETR
+
+![Image Name](./img/Deformer-DETR.png)
+
+### The model overcomes the disadvantages of DETR ###
+     Use feature pyramid network, reference point.
