@@ -1,3 +1,4 @@
+**Setup for inference on TensorRT float16**
 # Model architecture
 
 ![Image Name](./img/DETR.png)
